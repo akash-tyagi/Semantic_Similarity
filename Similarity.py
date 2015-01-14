@@ -11,11 +11,17 @@ import requests
 from math import log
 from collections import defaultdict
 from operator import itemgetter
-from bs4 import BeautifulSoup
-from pygoogle import pygoogle
-    
+from pattern import web
+from BeautifulSoup import BeautifulSoup
+
 class Similarity:
     def basic_similarity(self, q1, q2, count):
+        '''
+            Calculate the Similarity using the Jaccard Coefficient
+            Parameters:
+            count: number of results to retrieve from twitter
+            q1,q2: entities for which similarity is to be performed
+        '''
         tc = TwitterCrawler()
         tweets = tc.search_query(q1, count)
         text = tc.get_single_string_for_tweets(tweets)
@@ -40,51 +46,44 @@ class Similarity:
         return
     
     @staticmethod
-    def get_urls_from_google(query):
-        print "Fetching URLs for "+query
+    def get_urls_from_bing(query):
+        print "Fetching URLs from Bing for Query:"+query
         url_list = []
-#         try:
-#             gs = GoogleSearch(query)
-#             gs.results_per_page = 5
-#             results = []
-#             while len(results) < 5:
-#                 tmp = gs.get_results()
-#                 if not tmp:  # no more results were found
-#                     print "no results found"
-#                     break
-#                 results.extend(tmp)
-#         except SearchError, e:
-#             print "Search failed: %s" % e
-
-        g = pygoogle(query)
-        g.pages = 2
-        print '*Found %s results*'%(g.get_result_count())
-        for res in g.get_urls():
-            print res
-            url_list.append(res.url)
+        url = "http://www.bing.com/search"
+        total_url = 0
+        count = 0
+        while total_url < 5:
+            params = dict(q = query, first = count)
+            count += 15
+            print url
+            r = requests.get(url, params = params)
+            dom = web.Element(r.text)
+            for results in dom.by_tag('li.b_algo'):
+                result = results.by_tag('a')
+                url_list.append(result[0].attributes.get('href',''))
+                total_url += 1        
+        print url_list
         return url_list
 
     @staticmethod
     def download_webpages(query, urls):
-        print "Downloading web pages"
         i = 0
         for url in urls:
-            print "TESTING ON:" + url
+            print "Downloading Web Page:" + url
             r = requests.get(url)
             f = open('html_files/' + query + str(i) + ".html", 'w')
-            f.write(r.text.encode('utf8'))
+            bs = BeautifulSoup(r.text)
+            plain_text = ''.join(bs.findAll(text=True))
+            f.write(plain_text.encode('utf8'))
             f.close()
             i += 1
         return 
 
-    @staticmethod
-    def stripHtmlTags(htmlTxt):
-        if htmlTxt is None:
-            return None
-        else:
-            return ''.join(BeautifulSoup(htmlTxt).findAll(text=True)) 
-    
     def tfidf(self, query, total_doc):
+        '''
+            Calculate the tf-idf score of words in each doc and return
+            top 50 words among them
+        '''
         tf = defaultdict(dict)
         idf = {}  # idf dictionary of terms
         for i in range(total_doc):
@@ -130,6 +129,10 @@ class Similarity:
     
     @staticmethod
     def calculate_centroid(tf):
+        '''
+            Calculate the centroid of the vectors for each query given by
+            => [sum_of_all(vector(i))/|vector(i)|] / total_vectors
+        '''
         centroid = {}
         sum = 0
         for key,value in tf.iteritems():
@@ -150,6 +153,9 @@ class Similarity:
             
     @staticmethod
     def similarity_kernel(cent1, cent2):
+        '''
+            dot product of both the centroids of the query terms
+        '''
         val = 0
         intersect = [key for key in cent1.keys() if key in cent2.keys()]
         for word in intersect:
@@ -161,15 +167,16 @@ class Similarity:
         improved similarity function taken from the 'A Web-based Kernel Function 
         for Measuring the Similarity of Short Text Snippets' paper
         '''
-        urls_query_1 = Similarity.get_urls_from_google(q1)
-#         Similarity.download_webpages(q1, urls_query_1)
-#         cent1 = Similarity.calculate_centroid(self.tfidf(q1, len(urls_query_1)))
+        total_pages = 7
+        urls_query_1 = Similarity.get_urls_from_bing(q1)
+        Similarity.download_webpages(q1, urls_query_1)
+        cent1 = Similarity.calculate_centroid(self.tfidf(q1, total_pages))
         
-        urls_query_2 = Similarity.get_urls_from_google(q2)
-#         Similarity.download_webpages(q2, urls_query_2)
-#         cent2 = Similarity.calculate_centroid(self.tfidf(q2, len(urls_query_2)))
+        urls_query_2 = Similarity.get_urls_from_bing(q2)
+        Similarity.download_webpages(q2, urls_query_2)
+        cent2 = Similarity.calculate_centroid(self.tfidf(q2, total_pages))
 
-#         print self.similarity_kernel(cent1, cent2)    
+        print self.similarity_kernel(cent1, cent2)    
         return
         
 def main():

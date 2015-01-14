@@ -1,7 +1,1598 @@
-<html>
-<head><title>403 Forbidden</title></head>
-<body bgcolor="white">
-<center><h1>403 Forbidden</h1></center>
-<hr><center>nginx</center>
-</body>
-</html>
+
+DOCTYPE HTML
+
+
+Bill Gates - Forbes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			var forbes = forbes || {};
+			forbes.gtm = {
+		dfp_site : "fdc.forbes",
+		dfp_zone : "profile"
+			}
+		
+
+    	(function (){
+
+			window.displayedChannel = 'lists';
+			window.displayedSection = 'powerfulpeople';
+
+			// Check if welcome ad is not disabled
+			if(typeof forbes !== "undefined" && typeof forbes.js_options !== "undefined" && !forbes.js_options.welcome_ad_disable ){
+
+				var midnight = new Date(),
+					offset = -5 // if offset is not set, by default time is UTC 6:00am i.e EST 1am & EDT 12am for dailyWelcomeCookie expiration
+				;
+
+				if(midnight.getUTCHours() >= -offset)
+					midnight.setUTCDate(midnight.getUTCDate()+1)
+				;
+
+				midnight.setUTCHours(-offset);
+				midnight.setUTCMinutes(00);
+				midnight.setUTCSeconds(00);
+
+
+				var welcomeCookie = "welcomeAd=sessionCookie",
+					interstitial_cookie = '_forbes_exit_interstitial_timer',
+					tomorrow = new Date(),
+					month = tomorrow.getMonth(),
+					day = tomorrow.getDate(),
+					dailyWelcomeCookie = 'dailyWelcomeCookie=dailyCookie',
+					browser_user_agent = window.navigator.userAgent.toLowerCase(),
+					page_type = 'profile',
+					swimlane = '',
+					brand_voice = 'false'
+				;
+
+				if ((document.cookie.indexOf(welcomeCookie)==-1 || document.cookie.indexOf(dailyWelcomeCookie) == -1)
+					&& (window.navigator.userAgent.indexOf("Mozilla")>-1)
+					&& (browser_user_agent.indexOf("googlebot")==-1)
+					&& (browser_user_agent.indexOf("google web preview")==-1)
+					&& (window.location.host.indexOf("forbes.com")!=-1)
+					&& (window.location.search.indexOf("partner=yahoo")==-1)
+					&& (window.location.search.indexOf("partner=msn")==-1)
+					&& (window.location.search.indexOf("partner=aol")==-1)
+					&& (window.location.search.indexOf("partner=omg")==-1)
+					&& (window.location.search.indexOf("partner=huffpo")==-1)
+					&& (window.location.search.indexOf('nowelcome')==-1)
+					&& (swimlane.indexOf("rico")!=0 || page_type != 'article')
+					&& brand_voice==='false'){
+
+					if(document.cookie.indexOf(welcomeCookie) == -1 ){
+						document.cookie = welcomeCookie +'__welcome'+(month+1)+day+'; path=/; domain=.forbes.com';
+					}
+
+					if(document.cookie.indexOf(dailyWelcomeCookie) == -1){
+						document.cookie = dailyWelcomeCookie+'_forDate'+(month+1)+day+'; path=/; domain=.forbes.com; expires=' + midnight.toGMTString();
+					}
+
+					// check if interstitial's cookie hasn't been set already
+					if(document.cookie.indexOf( interstitial_cookie ) == -1){
+
+						// it doesn't exist; let's create the interstitial cookie and set it
+						// with the current timestamp
+
+						var now = new Date(),
+							now_time = now.getTime(),
+							expiration_date = new Date()
+						;
+
+						expiration_date
+							.setDate( expiration_date.getDate() + 365)
+						;
+
+						// set interstitial cookie to the current time
+						document.cookie = interstitial_cookie + '='+ now_time +'; path=/; domain=.forbes.com; expires=' + expiration_date.toUTCString();
+					}
+
+					if (document.cookie.indexOf(welcomeCookie) != -1 || document.cookie.indexOf(dailyWelcomeCookie) != -1){
+
+						// this cookie is used by interstitial_ad.js to determine if the user received a
+						// welcome ad before viewing the current page.
+						document.cookie="last_welcomead_url"+ "=" +escape(document.URL)+";path=/; domain=.forbes.com";
+						document.cookie="referrer"+ "=" +escape(document.referrer)+";path=/; domain=.forbes.com";
+						document.cookie="toURL"+ "=" +escape(document.URL)+";path=/; domain=.forbes.com";
+						document.cookie="refURL"+ "=" +escape(document.referrer)+";path=/; domain=.forbes.com";
+						this.location='http://www.forbes.com/fdc/welcome_mjx.shtml';
+					}
+				}
+
+			}
+		})();
+	
+
+
+
+
+			var specialslot = 'powerful-people-14';
+		
+
+
+Start: header
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Log in with your social account:
+
+
+
+
+Or, you can
+					log in
+					or
+					sign up
+					using Forbes.
+				
+
+end div.rollover_account
+ end div.account_wrapper
+
+
+
+
+
+
+
+
+ ie 
+
+
+
+
+
+New Posts
++1 posts this hour
+
+
+
+
+
+
+
+Most Popular
+
+
+					America's Youngest Billionaires
+				
+
+
+
+
+
+
+Lists
+
+
+					The 2015 30 Under 30
+				
+
+
+
+
+
+
+Video
+
+
+					30 Under 30
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ end div.typeahead_results_holder 
+ end li.search
+
+
+ end div.container (opened by js doc write) 
+
+
+
+ promoted subscription link 
+
+			2 FREE issues of Forbes
+			
+
+
+ login header   Help  |    Connect    |   Sign up  |  Log in  end login header 
+end div#header_userinfo 
+
+
+ End: header 
+
+(function() {var src = "http://ad.doubleclick.net/N7175/adj/fdc.forbes/profile;id=/profile/bill-gates/;channel=lists;specialslot=powerful-people;rb=yes;pos=top;sz=728x90,970x66,970x250,970x90;tile=1;";if(window.Krux && window.Krux.dfppKeyValues) { src = src+window.Krux.dfppKeyValues; }else if(window.parent && window.parent.Krux && window.parent.Krux.dfppKeyValues) { src = src+window.parent.Krux.dfppKeyValues; }src += ";ord=1412149352?";document.write('<script src="'+src+'"></s'+'cript>');})();
+
+ Start: content 
+  Start: #contentwrapper - Center content 
+
+ Start Profile Header 
+
+
+
+					Powerful People &#187;
+				
+
+
+#7 Bill Gates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ #6 Janet Yellen
+											Previous
+										
+
+
+
+
+
+ #8 Mario Draghi
+												Next
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ End Profile Header 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Start Left Rail 
+
+
+
+
+
+ Start data 
+
+More&#160;+
+
+Real Time Net Worth 
+
+								$80.2 Billion
+
+$208.5 M
+								| -0.3%
+						
+ As of 1/14/2015 @ 5:55PM *
+
+
+
+
+Follow
+
+
+Following
+
+
+Unfollow
+
+
+
+
+
+
+
+
+								Cofounder, Bill &#38; Melinda Gates Foundation
+						
+
+
+Age
+59
+
+
+Source Of Wealth
+
+					Microsoft, Self Made
+				
+
+
+ Self-Made Score 
+ 8 
+
+
+Residence
+Medina, WA
+
+
+Citizenship
+United States
+
+
+Marital Status
+Married
+
+
+Children
+3
+
+
+Education
+Drop Out, Harvard University
+
+
+ End Data 
+
+			Bill Gates on Forbes Lists
+			
+
+							#7
+							
+								Powerful People
+							
+
+#6 in 2013
+
+							#1
+							
+								Forbes 400
+							
+
+
+							#1
+							
+								Billionaires
+							
+
+
+											#1
+											
+												in United States
+											
+
+
+
+
+  End: forbes_list 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ < 
+ > 
+
+
+
+
+
+
+				America's richest man, Bill Gates, is using his billions to effect major social change around the globe. The Bill & Melinda Gates Foundation has given away $30 billion since 2000, a fortune that on its own would be one of the 20 largest in America. The foundation is working to eliminate polio in the three countries where it still exists and is committed to stamping out malaria wherever possible. In September the Gates Foundation pledged $50 million to fight Ebola in West Africa;  Bill Gates then announced in early November that his foundation would spend $500 million to fight malaria and a host of neglected diseases. In the U.S., the most generous philanthropist in history is working to improve education, in part by paying college fees for talented students through a $1.37 billion grant administered by  the United Negro College Fund.  [...] more
+
+
+*Reflects changes since 5pm EST last trading day
+
+
+
+
+More On Forbes
+
+start:title_content
+	
+	end:title_content
+start:tab_content
+
+ more_content_is_available: 
+start:load_more_content
+
+
+
+
+		 Buffett Slips Back to Third Richest in the World (For Now)
+		
+Just about a month ago, Warren Buffett overtook&nbsp;Carlos Slim Hel&uacute;&nbsp;to become the second-richest person in the world. With many of Berkshire Hathaway's acquisitions&nbsp;outperforming in 2014, the stock and the Oracle&nbsp;of Omaha&nbsp;both saw their fortunes climb, with Buffett reaching $74.8 billion — at the time second only to read &raquo;
+
+
+
+
+
+Alex Morrell, Forbes Staff
+			
+
+
+
+
+
+
+
+
+		 Roche Spends $1.03 Billion For Majority Stake In Foundation Medicine
+		
+Roche, the world’s largest maker of cancer drugs, is spending $1.03 billion to buy a 56.3% stake in Cambridge, Mass.-based Foundation Medicine, a company that uses genetics to help select drugs for cancer patients. Roche, based in Basel, Switzerland, will also market Foundation’s diagnostic tests outside the U.S., help educate doctors as to the read &raquo;
+
+
+
+
+
+Matthew Herper, Forbes Staff
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		 Watch Bill Gates Sip Water Made From Sewer Sludge
+		
+The goal of the Gates Foundation is to improve the quality of life for people around the world. Over 2.5 billion people around the world do not have access to safe sanitation, which is why Bill Gates is working with a company that built a sewage treatment machine that can turn human waste into drinkable water. The Omni Processor was built to read &raquo;
+
+
+
+
+
+Amit Chowdhry, Contributor
+			
+
+
+
+
+
+
+
+
+		 Are Your Political Views In Your Genes?
+		
+Most of us would like to think that we arrive at our political views by careful reasoning and unbiased examination of the evidence. But in a classic study, John Alford, a political scientist at Rice University, showed that identical twins, who share all the same genes, are more likely to share political views than fraternal twins, who share only read &raquo;
+
+
+
+
+
+John C. Goodman, Contributor
+			
+
+
+
+
+
+
+
+
+		 As Thomas Piketty Says, Of Course Bill Gates Is More Efficient Than The Government
+		
+There’s a lovely little tale from Thomas Piketty about a conversation he had with Bill Gates. Leading to the point that, Piketty says, at least sometimes Bill Gates probably is more efficient than government. My being remarkably more free market than Piketty is I’d say that most of us are, most of the time, more efficient than government. Bill read &raquo;
+
+
+
+
+
+Tim Worstall, Contributor
+			
+
+
+
+
+
+
+
+
+
+
+
+		 Exploring Gary Marshall's $100,000 Economics Challenge
+		
+Gary Marshall, a regular reader around here, has issued a challenge to conventional economics. You can find it here at the $100,000 Economics Challenge page. Marshall has asked that I have a look at it and so why not do that here, in the slow time of the year, so we can all have a look at it together?
+Marshall’s basic contention is that read &raquo;
+
+
+
+
+
+Tim Worstall, Contributor
+			
+
+
+
+
+
+
+
+
+		 Chinese Outbound Philanthropy
+		
+When Bill Gates and Warren Buffet invited Chinese billionaires for&nbsp;philanthropy&nbsp;events but received reluctance in 2010, they would not have imagined that in 2014 some wealthy Chinese already hit the international headlines for their own way of&nbsp;philanthropy.
+In August 2014, &nbsp;the Harvard school of public health has read &raquo;
+
+
+
+
+
+Lin Yang, Contributor
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		 Microsoft Begins Accepting Bitcoin For Purchasing Digital Goods
+		
+Everyone’s favorite cryptocurrency is getting its biggest sponsor yet: Microsoft.
+The Redmond, Washington&nbsp;tech&nbsp;giant has decided to allow people to use their Bitcoins to add credit to their Microsoft account and buy apps and games for Windows Phone, Xbox or Windows operating system.
+Microsoft is partnering with Bitcoin read &raquo;
+
+
+
+
+
+Aaron Tilley, Forbes Staff
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+			8 Great 2014 Books To Improve Your Mind And Make You More Successful!
+		
+Forbes Magazine: December 29, 2014 Issue
+Business Adventures: Twelve Classic Tales From the World of Wall Street by John Brooks (Open Road Media, $16.95) First published in 1969 and reissued this year, Brooks’ vividly written tales cover territory as vast as early success, the failure of the Edsel and the first big modern insider-trading scandal. Bill Gates and Warren read &raquo;
+
+
+
+
+
+Steve Forbes, Forbes Staff
+			
+
+
+
+
+
+
+
+
+				 		Steve Forbes Favorite Books of the Year--2014
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Steve Forbes, Forbes Staff
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		 Mexico's Carlos Slim Unseated As World's Second Richest Man By Warren Buffett
+		
+Over the&nbsp;past year, Carlos Slim Hel&uacute; has gone from being the richest man on the planet to the third place on Forbes World’s Billionaires list. Slim, who has been the second richest person in the world since May 2013 (behind Bill Gates), was bumped down to third place on Monday by&nbsp;Warren Buffett.
+Forbes data shows read &raquo;
+
+
+
+
+
+Dolia Estevez, Contributor
+			
+
+
+
+
+
+
+
+
+		 How Facebook And Apple, Their Technologies, Reduce Inequality
+		
+Tyler Cowen has an interesting piece in the New York Times looking at the impact of technology on inequality in the economy. What he says is quite right too: some to a great deal of the current increase in inequality is as a result of the way that technological development has been changing the working world and incomes. I think he’s also read &raquo;
+
+
+
+
+
+Tim Worstall, Contributor
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		 China Used More Concrete In 3 Years Than The U.S. Used In The Entire 20th Century [Infographic]
+		
+China produces and consumes about 60 percent of the world’s cement – the Three Gorges Dam alone required 16 million tonnes of it. To put China’s massive 21st century construction splurge and concrete consumption into perspective, Bill Gates made a mind blowing comparison.
+According to his blog, between 2011 and 2013, China consumed 6.6 read &raquo;
+
+
+
+
+
+Niall McCarthy, Contributor
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		 Why You Should Learn to Program (and How to Do It): An Interview with Voicemail Inventor Scott Jones
+		
+“It’s just good knowledge to have, ” said Scott Jones as he sat cross legged in his sweatpants and startup t-shirt. “Computers are in everything and it’s about to take a quantum leap,” he urged as he made his case that everyone should learn to program. And Jones is the kind of futurist you want to listen to.
+Prior to starting read &raquo;
+
+
+
+
+
+Matt Hunckler, Contributor
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+		 Boulder, Colorado: The World Leader in Women's Entrepreneurship?
+		
+Guest post by Alicia Robb, senior fellow, Kauffman Foundation
+A new report published by Babson College highlights the persistent gender gap in venture capital funding. While the amount of early-stage investment in companies with a woman on the executive team has tripled from 5 percent to 15 percent in the last 15 years, we still read &raquo;
+
+
+
+
+
+Dane Stangler, Contributor
+			
+
+
+
+
+
+
+
+
+		 5 Ways Your Tech Business Can Benefit Through Charitable Giving This Holiday Season
+		
+It might strike an outsider as unlikely that organizations focused on turning a profit and building their brands would find great appeal and benefits in giving money away to help others. However, this happens more often than some people think.
+Technology companies around the world have discovered that the money and resources they give to read &raquo;
+
+
+
+
+
+Drew Hendricks, Contributor
+			
+
+
+
+
+end:load_more_content
+
+end:tab_content
+
+Load more
+
+
+
+
+ End Left Rail 
+ Start Right Rail 
+
+
+(function() {var src = "http://ad.doubleclick.net/N7175/adj/fdc.forbes/profile;id=/profile/bill-gates/;channel=lists;specialslot=powerful-people;rb=yes;pos=logo;sz=120x40;tile=2;";if(window.Krux && window.Krux.dfppKeyValues) { src = src+window.Krux.dfppKeyValues; }else if(window.parent && window.parent.Krux && window.parent.Krux.dfppKeyValues) { src = src+window.parent.Krux.dfppKeyValues; }src += ";ord=1412149352?";document.write('<script src="'+src+'"></s'+'cript>');})();
+
+
+
+Forbes Video
+
+ Start of Brightcove Player 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ End of Brightcove Player 
+
+
+
+
+(function() {var src = "http://ad.doubleclick.net/N7175/adj/fdc.forbes/profile;id=/profile/bill-gates/;channel=lists;specialslot=powerful-people;rb=yes;pos=rec;sz=300x250,300x600,336x850,336x280;tile=3;";if(window.Krux && window.Krux.dfppKeyValues) { src = src+window.Krux.dfppKeyValues; }else if(window.parent && window.parent.Krux && window.parent.Krux.dfppKeyValues) { src = src+window.parent.Krux.dfppKeyValues; }src += ";ord=1412149352?";document.write('<script src="'+src+'"></s'+'cript>');})();
+
+
+
+Follow Bill Gates
+
+
+
+
+
+
+
+  End: entity_links 
+  End: social 
+
+Wealth list source: list: forbes-400, year: 2,014
+Net Worth Over Time
+$81 B
+						
+
+
+
+
+
+													#1 Forbes 400
+											
+September 2014
+$81 B
+
+
+
+
+
+
+
+
+													#1 Billionaires
+											
+March 2014
+$76 B
+
+
+
+
+
+
+
+
+													#1 Forbes 400
+											
+September 2013
+$72 B
+
+
+
+
+
+
+
+
+													#2 Billionaires
+											
+March 2013
+$67 B
+
+
+
+
+
+
+
+
+													#1 Forbes 400
+											
+September 2012
+$66 B
+
+
+
+
+
+
+
+
+													#2 Billionaires
+											
+March 2012
+$61 B
+
+
+
+
+
+
+
+
+													#5 Powerful People
+											
+November 2011
+$59 B
+
+
+
+
+
+
+
+
+													#1 Forbes 400
+											
+September 2011
+$59 B
+
+
+
+
+
+
+
+
+													#2 Billionaires
+											
+March 2011
+$56 B
+
+
+
+
+
+
+
+
+													#1 Forbes 400
+											
+September 2010
+$54 B
+
+
+
+
+
+81,76,72,67,66,61,59,59,56,54
+
+
+
+ Connections
+
+
+
+
+
+
+
+									Melinda Gates
+								
+
+										Family Member: spouse
+									
+
+
+
+
+
+
+
+
+									Microsoft
+								
+
+										Holds stake in Microsoft
+									
+
+
+
+
+
+
+
+
+									Harvard University
+								
+
+										Attended the school
+									
+
+
+
+
+
+
+
+
+									Jack Ma
+								
+
+										Related by industry: Technology
+									
+
+
+
+
+
+
+
+
+									FCC
+								
+
+										Holds stake in FCC
+									
+
+
+
+
+
+
+
+
+									Seattle, WA
+								
+
+										Resides in Seattle, WA Metropolitan Area
+									
+
+
+  End: .wrapper 
+
+ + show more 
+
+
+  End: .connections 
+
+
+(function() {var src = "http://ad.doubleclick.net/N7175/adj/fdc.forbes/profile;id=/profile/bill-gates/;channel=lists;specialslot=powerful-people;pos=railrec;sz=300x250,300x600,336x850,336x280;tile=4;";if(window.Krux && window.Krux.dfppKeyValues) { src = src+window.Krux.dfppKeyValues; }else if(window.parent && window.parent.Krux && window.parent.Krux.dfppKeyValues) { src = src+window.parent.Krux.dfppKeyValues; }src += ";ord=1412149352?";document.write('<script src="'+src+'"></s'+'cript>');})();
+
+
+
+
+
+
+[if lte IE 8]><script src="http://i.forbesimg.com/assets/js/forbes/profile/person/r2d3.min.js" charset="utf-8"></script><![endif]
+[if gte IE 9]><!
+
+<![endif]
+ Political Contribution 
+
+
+
+ Democrat 
+ $19,400 
+ Republican 
+ $32,400 
+ Independent 	
+ $49,900 
+ Total: $101,700 
+
+
+
+
+
+											 TEAM GRAHAM INC
+										
+
+ $5,000 
+
+
+
+
+											 TEAM GRAHAM INC
+										
+
+ $2,500 
+
+
+
+
+											 FRIENDS OF JOHN THUNE
+										
+
+ $2,500 
+
+
+
+
+											 HOYER FOR CONGRESS
+										
+
+ $1,000 
+
+
+
+
+											 NANCY PELOSI FOR CONGRESS
+										
+
+ $1,000 
+
+
+
+
+											 MCCONNELL SENATE COMMITTEE '14
+										
+
+ $500 
+
+19400
+32400
+49900
+19400
+32400
+49900
+
+
+2009-2014, Federal Election Commission
+
+
+Philanthropy
+
+
+Bill & Melinda Gates Foundation
+$28,000 M
+
+
+Data from November 2014
+
+
+Most Read on Forbes
+
+
+
+News
+People
+Places
+Companies
+
+
+
+
++ show more
+
+
+
+(function() {var src = "http://ad.doubleclick.net/N7175/adj/fdc.forbes/profile;id=/profile/bill-gates/;channel=lists;specialslot=powerful-people;pos=text;sz=300x250,336x280,300x600;tile=5;";if(window.Krux && window.Krux.dfppKeyValues) { src = src+window.Krux.dfppKeyValues; }else if(window.parent && window.parent.Krux && window.parent.Krux.dfppKeyValues) { src = src+window.parent.Krux.dfppKeyValues; }src += ";ord=1412149352?";document.write('<script src="'+src+'"></s'+'cript>');})();
+ end text 
+
+
+
+(function() {var src = "http://ad.doubleclick.net/N7175/adj/fdc.forbes/profile;id=/profile/bill-gates/;channel=lists;specialslot=powerful-people;pos=loge;sz=300x250,300x600,336x850,336x280;tile=6;";if(window.Krux && window.Krux.dfppKeyValues) { src = src+window.Krux.dfppKeyValues; }else if(window.parent && window.parent.Krux && window.parent.Krux.dfppKeyValues) { src = src+window.parent.Krux.dfppKeyValues; }src += ";ord=1412149352?";document.write('<script src="'+src+'"></s'+'cript>');})();
+
+
+ end loge div.sticky_ad_container 
+
+ End Right Rail 
+
+ End content 
+
+
+
+
+ Gigya Share divs for gigya_share_button and gigya_share_counter 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ End: #contentwrapper 
+ Start: footer 
+
+
+Inside Forbes
+ Getting '/shared/promo/largeimage_fourfeature.ftl' 
+ /shared/promo/ 
+ largeimage_fourfeature 
+ /shared/promo/largeimage_fourfeature.ftl 
+
+
+
+
+
+
+
+							    Introducing The Members Of FORBES 30 Under 30 2015
+
+Presenting today's greatest gathering of young game changers, movers and makers.
+a href="http://www.forbes.com/30under30/#/">See the full list &#187;</a
+
+
+
+
+
+
+
+
+
+Reinventing The Pizza
+
+
+
+
+
+
+
+How A Comic Nerd Became Bond Buyers' Best Friend
+
+
+
+
+
+
+
+
+see photos
+
+30 Under 30 In Music: The Class Of 2015
+
+
+
+
+
+
+
+Real-Time Billionaires
+
+
+
+
+
+ END EDITORIAL PROMOTIONS 
+
+
+
+
+Forbes
+
+
+Business
+
+
+Investing
+
+
+Technology
+
+
+Entrepreneurs
+
+
+Op/Ed
+
+
+Leadership
+
+
+Lifestyle
+
+
+Lists
+
+
+
+
+Conferences
+
+
+Forbes Reinventing America Summit
+
+
+Forbes Reinventing America: The Talent Summit
+
+
+Forbes Women’s Summit
+
+
+Forbes 400 Summit on Philanthropy
+
+
+Forbes Reinventing America: AgTech Summit
+
+
+Forbes CIO Summit
+
+
+Forbes Under 30 Summit
+
+
+Forbes CMO Summit
+
+
+Forbes Healthcare Summit
+
+
+Forbes Asia “Best Under a Billion”
+
+
+Forbes Advisor Playbook iConference
+
+
+
+
+Education
+
+Forbes School of Business at Ashford University
+
+ <div class="products_newsletter footer-list fleft">  
+Newsletters
+
+
+Forbes Investor
+
+
+Special Situation Survey
+
+
+Forbes Dividend Investor
+
+
+Forbes Premium Income Report
+
+
+Investing Newsletters
+
+
+ </div> 
+
+
+Products
+
+
+Forbes eBooks
+
+
+Forbes Newsfeeds
+
+
+Reprints & Permissions
+
+
+Company Info
+
+Advertise
+Forbes Press Room
+Forbes Careers
+Contact Us
+Sitemap
+Help
+
+
+
+
+
+
+
+
+
+
+
+2 Free Issues
+
+
+Subscriber Services
+
+
+Gift Subscription
+
+
+
+
+
+Forbes China
+Forbes India
+Forbes Israel
+Forbes Mexico
+Forbes Middle East
+
+
+Forbes Poland
+Forbes Romania
+Forbes Russia
+Forbes Spain
+
+
+RealClear
+RealClear Politics
+RealClear Markets
+RealClear World
+RealClear Sports
+
+
+
+
+
+2015 Forbes.com LLC&#153; &nbsp; All Rights Reserved
+
+Terms and Conditions
+Privacy Statement
+Market Data by Morningstar
+AdChoices
+
+
+
+
+ End: footer 
+start:gigya_settings
+
+
+
+
+
+
+
+
+
+
+
+
+
+end:gigya_settings
+ Start: Footer 
+
+            //<![CDATA[
+                var ppi_AjaxURI = '/wp-admin/admin-ajax.php'
+                	,imagesBaseCdn = 'http://i.forbesimg.com'
+					,followBarLocation = 'channel_8'; 
+            //]]>
+        
+Start: Gigya Configs
+
+            var gigya_conf = {
+                siteName: 'forbes.com',
+                APIkey: '3_8Fcn29ZQ5lcRRr8BsC6Y2q8eRKPl567JTM6IWXsqW4eqW57_fNx29GDl9YdzZLvH',
+                connectWithoutLoginBehavior: 'alwaysLogin',
+                enabledProviders: 'facebook,twitter,linkedin,googleplus,yahoo,messenger,wordpress,aol,blogger,openid,foursquare,typepad'
+            };
+
+            (function() {
+				var po = document.createElement('script');
+				po.type = 'text/javascript';
+				//po.async = true;
+				po.src = 'http://cdn.gigya.com/js/gigya.js?apiKey=3_8Fcn29ZQ5lcRRr8BsC6Y2q8eRKPl567JTM6IWXsqW4eqW57_fNx29GDl9YdzZLvH';
+
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(po, s);
+			})();
+
+			(function() {
+				var po = document.createElement('script');
+				po.type = 'text/javascript';
+				//po.async = true;
+				po.src = 'http://cdn.gigya.com/js/gigyaGAIntegration.js';
+
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(po, s);
+			})();
+        
+End: Giya Configs 
+
+		var google_tag_channel = "lists";
+		var google_tag_section = "";
+		var google_tag_swimlane = "";
+		var google_tag_specialslot = "powerful-people-14";
+		var google_tag_article_special_slot = "";
+		var google_tag_display_channel = "lists";
+		var google_tag_display_section = "powerfulpeople";
+		var google_tag_zone = "profile";
+		var google_tag_article_id = "/profile/bill-gates/";
+	
+
+
+
+
+        forbes.bootstrap.init();
+    
+ End: Footer 
+
+

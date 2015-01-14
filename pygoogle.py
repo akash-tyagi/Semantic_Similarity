@@ -167,7 +167,7 @@ class pygoogle:
             results[page] = urls
         return results
         
-    def get_urls_from_google(self):
+    def get_urls_from_bing(self):
         """Returns list of result URLs"""
         results = []
         search_results = self.__search__()

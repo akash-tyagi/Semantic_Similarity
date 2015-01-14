@@ -7,7 +7,6 @@ from mrjob.job import MRJob
 import re
 import simplejson as json
 from operator import itemgetter
-from dns.name import empty
 
 class CountWords(MRJob):
     '''
@@ -30,18 +29,11 @@ class CountWords(MRJob):
 
     # discard the key; it is just None
     def reducer_find_max_word(self, _, word_count_pairs):
-        list = []
-        i = 0
-        for word in word_count_pairs:
-            print word[0],word[1]
-            list.append(('a',i))
-            i +=1
-            if i > 10:
-                break
-        print list
-        if list: 
-            yield list.sort(key=lambda tup: tup[1])
-
+        list = sorted(word_count_pairs, key=itemgetter(1),reverse=True)[:10]
+        for a in list:
+            print a
+        yield "max words:", list
+    
     def steps(self):
         return [
             self.mr(mapper=self.mapper_get_words,
