@@ -9,10 +9,10 @@ from random import randint
 
 class TwitterCrawler():
     # Fill in the blanks here for your own Twitter app.
-    consumer_key = "EmmeYQOP0egZpOy5qM1787FvH"
-    consumer_secret = "kYM3NRCZHhU4wrhn8VzMq5dfWfo0SaiRTFGlC7puDEVr3gSwKP"
-    access_key = "294976300-cpUezfmPpZhSQ6V9XcvtqwRJQWIaQ4j4t3u6cH59"
-    access_secret = "QveTjuS4KvZq5Br86UqVXcPe1MtiIXgNOJfHTvJgIrf0I"
+    consumer_key = ""
+    consumer_secret = ""
+    access_key = ""
+    access_secret = ""
     auth = None
     api = None
 

@@ -1,15 +1,13 @@
 Semantic_Similarity
 ===================
 
-Build a semantic similarity engine using twiitter and google apis based on jaccard and improved similarity function.
+Build a semantic similarity engine using data downloaded from twitter and bing engine using jaccard and improved similarity function mentioned in the paper mentioned below.
 
 for twitter using tweepy
-for google using pygoogle.py from xgoogle project
+using bing as search engine for downloading web pages
 
 Similarity.py contains two functions 
 
-1.basic_similarity: Using jaccard function
+1.basic_similarity: Using jaccard coefficient to calculate the similarity score
 
-2.improved_similarity: Using fucntion from http://robotics.stanford.edu/users/sahami/papers-dir/www2006.pdf
-NOTE: Improved similarity is not working particularly well, somehow not able to fetch the url results from google.
-May be need to use the google api
+2.improved_similarity: Using function from http://robotics.stanford.edu/users/sahami/papers-dir/www2006.pdf
